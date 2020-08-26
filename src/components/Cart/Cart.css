@@ -1,0 +1,8 @@
+
+.cart button{
+    width: 160px;
+    height: 27px;
+    background: goldenrod;
+    border: none;
+    border-radius: 7px;
+}
