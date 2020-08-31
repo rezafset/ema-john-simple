@@ -1,0 +1,16 @@
+.OrderItem{
+    border-bottom: 1px solid gray;
+    margin-left: 15px;
+}
+.OrderItem h4{
+    color: blue;
+    font-weight: 600;
+}
+.OrderItem button{
+    width: 160px;
+    height: 27px;
+    background: goldenrod;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 5px;
+}

@@ -1,13 +1,11 @@
 import React from 'react';
 import './Cart.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = (props) => {
     const cart = props.cart;
     // console.log('Cart', cart);
 
-    const total = cart.reduce((total , prd) => total + prd.price , 0)
+    const total = cart.reduce((total , prd) => total + prd.price * prd.quantity , 0)
     console.log(total);
 
     const tax = total/10;
@@ -34,7 +32,9 @@ const Cart = (props) => {
             <p>Shipping Cost: {shipping}</p>
             <p>Tax: {formatNumber(tax)} </p>
             <p>Total Price: {formatNumber(total + tax + shipping)}</p>
-            <button><FontAwesomeIcon icon={faShoppingCart} />Checkout</button>
+            {
+                props.children
+            }
         </div>
     );
 };
